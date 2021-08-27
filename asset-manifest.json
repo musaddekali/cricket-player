@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.6366ae9b.chunk.css",
-    "main.js": "/static/js/main.294a5886.chunk.js",
-    "main.js.map": "/static/js/main.294a5886.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.41fde738.js",
-    "runtime-main.js.map": "/static/js/runtime-main.41fde738.js.map",
-    "static/css/2.818011ed.chunk.css": "/static/css/2.818011ed.chunk.css",
-    "static/js/2.63a18562.chunk.js": "/static/js/2.63a18562.chunk.js",
-    "static/js/2.63a18562.chunk.js.map": "/static/js/2.63a18562.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/2.818011ed.chunk.css.map": "/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.6366ae9b.chunk.css.map": "/static/css/main.6366ae9b.chunk.css.map",
-    "static/js/2.63a18562.chunk.js.LICENSE.txt": "/static/js/2.63a18562.chunk.js.LICENSE.txt"
+    "main.css": "/cricket-player/static/css/main.6366ae9b.chunk.css",
+    "main.js": "/cricket-player/static/js/main.294a5886.chunk.js",
+    "main.js.map": "/cricket-player/static/js/main.294a5886.chunk.js.map",
+    "runtime-main.js": "/cricket-player/static/js/runtime-main.dbd3c451.js",
+    "runtime-main.js.map": "/cricket-player/static/js/runtime-main.dbd3c451.js.map",
+    "static/css/2.818011ed.chunk.css": "/cricket-player/static/css/2.818011ed.chunk.css",
+    "static/js/2.63a18562.chunk.js": "/cricket-player/static/js/2.63a18562.chunk.js",
+    "static/js/2.63a18562.chunk.js.map": "/cricket-player/static/js/2.63a18562.chunk.js.map",
+    "index.html": "/cricket-player/index.html",
+    "static/css/2.818011ed.chunk.css.map": "/cricket-player/static/css/2.818011ed.chunk.css.map",
+    "static/css/main.6366ae9b.chunk.css.map": "/cricket-player/static/css/main.6366ae9b.chunk.css.map",
+    "static/js/2.63a18562.chunk.js.LICENSE.txt": "/cricket-player/static/js/2.63a18562.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.41fde738.js",
+    "static/js/runtime-main.dbd3c451.js",
     "static/css/2.818011ed.chunk.css",
     "static/js/2.63a18562.chunk.js",
     "static/css/main.6366ae9b.chunk.css",
