@@ -1,0 +1,9 @@
+
+.selected-player-card img{
+    width: 70px;
+    float: left;
+    border-radius: 50%;
+}
+.selected-player-card div{
+    padding-left: 80px;
+}
