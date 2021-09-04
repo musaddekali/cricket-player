@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Header(props) {
+function Header({headerPlayerCount}) {
     return (
         <nav className="navbar navbar-expand-lg navbar-light bg-light fixed-top">
             <div className="container-fluid">
@@ -11,7 +11,7 @@ function Header(props) {
                     <button style={{ position: 'absolute', top: '9px', right: '80px' }} type="button" className="btn btn-primary">
                         Players
                         <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                            {props.selectedPlayers}
+                            {headerPlayerCount}
                         </span>
                     </button>
                 </a>

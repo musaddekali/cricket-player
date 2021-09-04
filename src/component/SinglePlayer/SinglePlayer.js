@@ -1,7 +1,9 @@
 import React from 'react';
+import { ACTIONS } from '../../reducer';
 import { FaPlus } from "react-icons/fa";
-export default function SinglePlayer(props) {
-    const { id, name, image, title, desc, address, } = props.player;
+
+export default function SinglePlayer({ player, dispatch }) {
+    const { id, name, image, title, desc, address, } = player;
 
     return (
         <div className="row main-item mb-3 pb-3 border border-0 border-bottom">
@@ -11,10 +13,14 @@ export default function SinglePlayer(props) {
             <div className="col-md-8">
                 <h3>{name}</h3>
                 <p>{title}</p>
-                <p style={{fontSize: '15px'}}>{desc}</p>
+                <p style={{ fontSize: '15px' }}>{desc}</p>
                 <address className="text-secondary">Address: {address}</address>
                 <div className="text-end">
-                    <button onClick={() => props.selectHandelar(id)} className="btn btn-success"><FaPlus/></button>
+                    <button
+                        onClick={() => dispatch({ type: ACTIONS.SELECTED_PLAYER, id: id })}
+                        className="btn btn-success">
+                        <FaPlus />
+                    </button>
                 </div>
             </div>
         </div>
