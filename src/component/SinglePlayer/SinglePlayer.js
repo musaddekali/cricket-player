@@ -2,8 +2,21 @@ import React from 'react';
 import { ACTIONS } from '../../reducer';
 import { FaPlus } from "react-icons/fa";
 
-export default function SinglePlayer({ player, dispatch }) {
+export default function SinglePlayer({ state, player, dispatch }) {
     const { id, name, image, title, desc, address, } = player;
+    const { allPlayers, selectedPlayers } = state;
+
+    // Error handler when player over and same player 
+    const handleError = () => {
+        dispatch({ type: ACTIONS.SELECTED_PLAYER, id: id });
+
+        if (selectedPlayers.find((player) => player.id === id)) {
+            dispatch({ type: ACTIONS.ERROR, msg: 'This player is alrady exist.' })
+        }
+        else if (selectedPlayers.length >= 11) {
+            dispatch({ type: ACTIONS.ERROR, msg: 'You can choose more then 11 players.' })
+        }
+    }
 
     return (
         <div className="row main-item mb-3 pb-3 border border-0 border-bottom">
@@ -17,7 +30,7 @@ export default function SinglePlayer({ player, dispatch }) {
                 <address className="text-secondary">Address: {address}</address>
                 <div className="text-end">
                     <button
-                        onClick={() => dispatch({ type: ACTIONS.SELECTED_PLAYER, id: id })}
+                        onClick={handleError}
                         className="btn btn-success">
                         <FaPlus />
                     </button>

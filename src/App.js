@@ -4,7 +4,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap';
 import './App.css';
 import CricketTeams from './component/CricketTeams/CricketTeams';
-// import ScrollButton from './component/BackToTop/BackToTop';
 
 //Main App
 function App() {
@@ -26,7 +25,6 @@ function App() {
         state.loading ? (<h1 className='page-loading'>Loading...</h1>) :
           <>
               <CricketTeams state={state} dispatch={dispatch}/>
-            {/* <ScrollButton /> */}
           </>
 
       }

@@ -4,10 +4,11 @@ import Header from '../Header/Header';
 import SinglePlayer from '../SinglePlayer/SinglePlayer';
 import SelectedSinglePlayer from '../SelectedSinglePlayer/SelectedSinglePlayer';
 import ShowInfoBox from '../ShowInfoBox/ShowInfoBox';
+import AllPlayerList from '../AllPlayerList/AllPlayerList';
 
 
 export default function CricketTeams({ state, dispatch }) {
-    const { allPlayers, selectedPlayers } = state;
+    const { allPlayers, selectedPlayers, error } = state;
 
     return (
         <>
@@ -22,16 +23,11 @@ export default function CricketTeams({ state, dispatch }) {
                     <div className="row">
                         {/* All Players  */}
                         <div className="col-md-8 all-players pe-md-5">
-                            {
-                                allPlayers.map((player) => {
-                                    return <SinglePlayer
-                                        state={state}
-                                        dispatch={dispatch}
-                                        key={player.id}
-                                        player={player}
-                                    />
-                                })
-                            }
+                            <AllPlayerList
+                                state={state}
+                                dispatch={dispatch}
+                                allPlayers={allPlayers}
+                            />
                         </div>
                         {/* Selected Player List  */}
                         <div id="selected-players" className="col-md-4 selected-players">
@@ -49,6 +45,16 @@ export default function CricketTeams({ state, dispatch }) {
                         </div>
                     </div>
                 </div>
+                {/* show error  */}
+                {
+                    error ? (
+                        <ShowInfoBox
+                         state={state}
+                         dispatch={dispatch}
+                        />
+                    ) :
+                        ''
+               }
             </section>
         </>
     )

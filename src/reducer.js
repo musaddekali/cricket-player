@@ -1,10 +1,10 @@
 export const ACTIONS = {
-    LOADING_API:'loading-api',
+    LOADING_API: 'loading-api',
     ALL_PlAYERS: 'all-players',
-    ADD_PLAYER: 'add-player',
     SELECTED_PLAYER: 'selected-player',
     REMOVE_PLAYER: 'remove-player',
     ERROR: 'error',
+    CLOSE_ERROR: 'close-error-msg',
     IS_VISIBLE: 'is-visible',
 }
 
@@ -12,6 +12,9 @@ export const initialState = {
     allPlayers: [],
     selectedPlayers: [],
     loading: false,
+    error: null,
+    errorMsg: '',
+    isVisible: false,
 }
 
 export function playerReducer(state, action) {
@@ -21,20 +24,31 @@ export function playerReducer(state, action) {
                 ...state,
                 loading: true,
             }
+
         case ACTIONS.ALL_PlAYERS:
             return {
                 ...state,
                 allPlayers: action.players,
                 loading: false,
             };
+
         case ACTIONS.SELECTED_PLAYER:
             const selected = state.allPlayers.filter((player) => {
+                // return null if player alrady exist 
+                if (state.selectedPlayers.find(exPlayer => exPlayer.id === action.id)) {
+                    return null;
+                }
+                // return null if player is more then 11
+                if (state.selectedPlayers.length === 11) {
+                    return null;
+                }
                 return player.id === action.id;
             });
             return {
                 ...state,
                 selectedPlayers: [...state.selectedPlayers, ...selected],
             };
+
         case ACTIONS.REMOVE_PLAYER:
             const removed = state.selectedPlayers.filter((player) => {
                 return player.id !== action.id;
@@ -42,7 +56,22 @@ export function playerReducer(state, action) {
             return {
                 ...state,
                 selectedPlayers: removed,
+            };
+
+        case ACTIONS.ERROR:
+            return {
+                ...state,
+                error: true,
+                errorMsg: action.msg,
+            };
+
+        case ACTIONS.CLOSE_ERROR:
+            return {
+                ...state,
+                error: false,
+                errorMsg: '',
             }
+
         default:
             return state;
     }
