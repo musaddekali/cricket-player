@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/cricket-player/static/css/main.016ebc34.chunk.css",
-    "main.js": "/cricket-player/static/js/main.294a5886.chunk.js",
-    "main.js.map": "/cricket-player/static/js/main.294a5886.chunk.js.map",
+    "main.css": "/cricket-player/static/css/main.b0b62cf3.chunk.css",
+    "main.js": "/cricket-player/static/js/main.75a6fc4d.chunk.js",
+    "main.js.map": "/cricket-player/static/js/main.75a6fc4d.chunk.js.map",
     "runtime-main.js": "/cricket-player/static/js/runtime-main.dbd3c451.js",
     "runtime-main.js.map": "/cricket-player/static/js/runtime-main.dbd3c451.js.map",
     "static/css/2.818011ed.chunk.css": "/cricket-player/static/css/2.818011ed.chunk.css",
-    "static/js/2.63a18562.chunk.js": "/cricket-player/static/js/2.63a18562.chunk.js",
-    "static/js/2.63a18562.chunk.js.map": "/cricket-player/static/js/2.63a18562.chunk.js.map",
+    "static/js/2.7b2493a0.chunk.js": "/cricket-player/static/js/2.7b2493a0.chunk.js",
+    "static/js/2.7b2493a0.chunk.js.map": "/cricket-player/static/js/2.7b2493a0.chunk.js.map",
     "index.html": "/cricket-player/index.html",
     "static/css/2.818011ed.chunk.css.map": "/cricket-player/static/css/2.818011ed.chunk.css.map",
-    "static/css/main.016ebc34.chunk.css.map": "/cricket-player/static/css/main.016ebc34.chunk.css.map",
-    "static/js/2.63a18562.chunk.js.LICENSE.txt": "/cricket-player/static/js/2.63a18562.chunk.js.LICENSE.txt"
+    "static/css/main.b0b62cf3.chunk.css.map": "/cricket-player/static/css/main.b0b62cf3.chunk.css.map",
+    "static/js/2.7b2493a0.chunk.js.LICENSE.txt": "/cricket-player/static/js/2.7b2493a0.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.dbd3c451.js",
     "static/css/2.818011ed.chunk.css",
-    "static/js/2.63a18562.chunk.js",
-    "static/css/main.016ebc34.chunk.css",
-    "static/js/main.294a5886.chunk.js"
+    "static/js/2.7b2493a0.chunk.js",
+    "static/css/main.b0b62cf3.chunk.css",
+    "static/js/main.75a6fc4d.chunk.js"
   ]
 }
