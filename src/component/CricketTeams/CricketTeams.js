@@ -1,11 +1,9 @@
 import React from 'react';
 import './CricketTeams.css';
 import Header from '../Header/Header';
-import SinglePlayer from '../SinglePlayer/SinglePlayer';
-import SelectedSinglePlayer from '../SelectedSinglePlayer/SelectedSinglePlayer';
+import SelectedPlayersList from '../SelectedPlayers/SelectedPlayersList';
 import ShowInfoBox from '../ShowInfoBox/ShowInfoBox';
-import AllPlayerList from '../AllPlayerList/AllPlayerList';
-
+import AllPlayerList from '../AllPlayers/AllPlayerList';
 
 export default function CricketTeams({ state, dispatch }) {
     const { allPlayers, selectedPlayers, error } = state;
@@ -32,16 +30,11 @@ export default function CricketTeams({ state, dispatch }) {
                         {/* Selected Player List  */}
                         <div id="selected-players" className="col-md-4 selected-players">
                             <p className="total-added-item"><strong>Selected {selectedPlayers.length} Players</strong></p>
-                            {
-                                selectedPlayers.map((player) => {
-                                    return <SelectedSinglePlayer
-                                        state={state}
-                                        dispatch={dispatch}
-                                        key={player.id}
-                                        player={player}
-                                    />
-                                })
-                            }
+                            <SelectedPlayersList
+                                state={state}
+                                dispatch={dispatch}
+                                selectedPlayers={selectedPlayers}
+                            />
                         </div>
                     </div>
                 </div>

@@ -70,7 +70,7 @@ export function playerReducer(state, action) {
                 ...state,
                 error: false,
                 errorMsg: '',
-            }
+            };
 
         default:
             return state;
